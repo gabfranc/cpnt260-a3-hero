@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Montserrat+Subrayada:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sarabun:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sofia&family=Tangerine:wght@400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: #100a3c;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body{
+  overflow-x: hidden;
+  font-family: 'Sarabun', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav{
+  width: 100%;
+  position: absolute;
+  background: #DDAE7E;
+  top: 0%;
+  left: 0;
+  padding: 30px 9%;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-flex;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  color:#100a3c;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color:#100a3c;
+  font-weight: 600;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+svg:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+/*** Menu BAR ICONS ***/
+#sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgb(163, 131, 98);
+  box-shadow: -12px 0px 4px rgba(94, 43, 31, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#sidebar li {
+  margin-top: 25px;
+  width: 100%;
+}
+
+#sidebar a {
+  color:#ebe9ff;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+#sidebar a:hover {
+  color:#cfcbf7;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  font-weight: 600;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+#sidebar li:hover {
+  margin-top: 25px;
+  width: 100%;
+  background-color: rgb(169, 123, 77);
+  height: 70px;
+  width: 20vh;
+}
+.menu_icon {
+  display: none;
+}
+
+/** h1/Title Name **/
+section{
+  display: flex;
+  text-align: center;
+  position: fixed;
+  margin-left: 15vh;
+  margin-top: 35vh;
+  margin-bottom: 15vh;
+  margin-right: 15vh;
+
+}
+main{
+  display: block;
+}
+h1{
+  color: #5484FE;
+  text-shadow: 3px 3px 2px #100a3c;
+  perspective: 100px;
+  font-size: 11vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg) rotateY(45deg);
+  animation: rotateCube 5s infinite linear;
+}
+
+h2, .button{
+  margin-top: 3vh;
+}
+h2 {
+  color:#ebe9ff;
+  text-shadow: 2px 2px 0#0e284d;
+}
+
+
+/** Header/Logo will move/wave **/
+h1:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
+h1:nth-child(2) { transform: rotateY(20deg) translateZ(100px); }
+h1:nth-child(3) { transform: rotateY(30deg) translateZ(100px); }
+h1:nth-child(4) { transform: rotateY(-20deg) translateZ(100px); }
+h1:nth-child(5) { transform: rotateX(30deg) translateZ(100px); }
+h1:nth-child(6) { transform: rotateX(-10deg) translateZ(100px); }
+
+@keyframes rotateCube {
+  from { transform: rotateX(15deg) rotateY(15deg); }
+  to { transform: rotateX(3deg) rotateY(6deg); }
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    color: #5484FE;
+    font-size: 56px;
+    text-shadow: 3px 3px 2px #100a3c;
+  }
+  video{
+    height: 100vh;
+  }
+
+  #sidebar {
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 800px) {
+  nav .OnMobile{
+    display: none;
+  }
+
+  .menu_icon {
+    display: block;
+  }
+}
+
+/** Button Settings **/
+
+button {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 600;
+  padding: 15px 15px 15px 15px;
+  font-size: 13px;
+  background: linear-gradient(40deg, #DDAE7E,#eec7a0, #dd8c7e, #e4d4c5) ;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background: linear-gradient(40deg, #be8d5d,#e4b17d, #d57665, #edc49e) ;
+}
+
+button a{
+  text-decoration: none;
+  color:#0e284d;
+}
+
+button a:hover{
+  color:#05172f;
+  font-weight: 700;
+}
